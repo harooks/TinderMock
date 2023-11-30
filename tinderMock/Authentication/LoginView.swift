@@ -40,7 +40,7 @@ struct LoginView: View {
                             
             //sign up button
             NavigationLink {
-                
+                RegistrationView()
             } label: {
                 VStack(spacing: 5) {
                     Text("Don't have an account?")
