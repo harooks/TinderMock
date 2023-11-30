@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F558601F2B18E059005E5BF5 /* tinderMockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558601E2B18E059005E5BF5 /* tinderMockApp.swift */; };
+		F55860212B18E059005E5BF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55860202B18E059005E5BF5 /* ContentView.swift */; };
+		F55860232B18E05C005E5BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55860222B18E05C005E5BF5 /* Assets.xcassets */; };
+		F55860262B18E05C005E5BF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55860252B18E05C005E5BF5 /* Preview Assets.xcassets */; };
+		F55860302B18E05C005E5BF5 /* tinderMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558602F2B18E05C005E5BF5 /* tinderMockTests.swift */; };
+		F558603A2B18E05C005E5BF5 /* tinderMockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55860392B18E05C005E5BF5 /* tinderMockUITests.swift */; };
+		F558603C2B18E05C005E5BF5 /* tinderMockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F558603B2B18E05C005E5BF5 /* tinderMockUITestsLaunchTests.swift */; };
+		F55860492B18E24F005E5BF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F55860482B18E24F005E5BF5 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F558602C2B18E05C005E5BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F55860132B18E059005E5BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F558601A2B18E059005E5BF5;
+			remoteInfo = tinderMock;
+		};
+		F55860362B18E05C005E5BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F55860132B18E059005E5BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F558601A2B18E059005E5BF5;
+			remoteInfo = tinderMock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F558601B2B18E059005E5BF5 /* tinderMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinderMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F558601E2B18E059005E5BF5 /* tinderMockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderMockApp.swift; sourceTree = "<group>"; };
+		F55860202B18E059005E5BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F55860222B18E05C005E5BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F55860252B18E05C005E5BF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F558602B2B18E05C005E5BF5 /* tinderMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinderMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F558602F2B18E05C005E5BF5 /* tinderMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderMockTests.swift; sourceTree = "<group>"; };
+		F55860352B18E05C005E5BF5 /* tinderMockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinderMockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55860392B18E05C005E5BF5 /* tinderMockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderMockUITests.swift; sourceTree = "<group>"; };
+		F558603B2B18E05C005E5BF5 /* tinderMockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderMockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F55860482B18E24F005E5BF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F55860182B18E059005E5BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860282B18E05C005E5BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860322B18E05C005E5BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F55860122B18E059005E5BF5 = {
+			isa = PBXGroup;
+			children = (
+				F558601D2B18E059005E5BF5 /* tinderMock */,
+				F558602E2B18E05C005E5BF5 /* tinderMockTests */,
+				F55860382B18E05C005E5BF5 /* tinderMockUITests */,
+				F558601C2B18E059005E5BF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F558601C2B18E059005E5BF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F558601B2B18E059005E5BF5 /* tinderMock.app */,
+				F558602B2B18E05C005E5BF5 /* tinderMockTests.xctest */,
+				F55860352B18E05C005E5BF5 /* tinderMockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F558601D2B18E059005E5BF5 /* tinderMock */ = {
+			isa = PBXGroup;
+			children = (
+				F55860482B18E24F005E5BF5 /* GoogleService-Info.plist */,
+				F558601E2B18E059005E5BF5 /* tinderMockApp.swift */,
+				F55860202B18E059005E5BF5 /* ContentView.swift */,
+				F55860222B18E05C005E5BF5 /* Assets.xcassets */,
+				F55860242B18E05C005E5BF5 /* Preview Content */,
+			);
+			path = tinderMock;
+			sourceTree = "<group>";
+		};
+		F55860242B18E05C005E5BF5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F55860252B18E05C005E5BF5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F558602E2B18E05C005E5BF5 /* tinderMockTests */ = {
+			isa = PBXGroup;
+			children = (
+				F558602F2B18E05C005E5BF5 /* tinderMockTests.swift */,
+			);
+			path = tinderMockTests;
+			sourceTree = "<group>";
+		};
+		F55860382B18E05C005E5BF5 /* tinderMockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F55860392B18E05C005E5BF5 /* tinderMockUITests.swift */,
+				F558603B2B18E05C005E5BF5 /* tinderMockUITestsLaunchTests.swift */,
+			);
+			path = tinderMockUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F558601A2B18E059005E5BF5 /* tinderMock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F558603F2B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMock" */;
+			buildPhases = (
+				F55860172B18E059005E5BF5 /* Sources */,
+				F55860182B18E059005E5BF5 /* Frameworks */,
+				F55860192B18E059005E5BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tinderMock;
+			productName = tinderMock;
+			productReference = F558601B2B18E059005E5BF5 /* tinderMock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F558602A2B18E05C005E5BF5 /* tinderMockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55860422B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMockTests" */;
+			buildPhases = (
+				F55860272B18E05C005E5BF5 /* Sources */,
+				F55860282B18E05C005E5BF5 /* Frameworks */,
+				F55860292B18E05C005E5BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F558602D2B18E05C005E5BF5 /* PBXTargetDependency */,
+			);
+			name = tinderMockTests;
+			productName = tinderMockTests;
+			productReference = F558602B2B18E05C005E5BF5 /* tinderMockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F55860342B18E05C005E5BF5 /* tinderMockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55860452B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMockUITests" */;
+			buildPhases = (
+				F55860312B18E05C005E5BF5 /* Sources */,
+				F55860322B18E05C005E5BF5 /* Frameworks */,
+				F55860332B18E05C005E5BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F55860372B18E05C005E5BF5 /* PBXTargetDependency */,
+			);
+			name = tinderMockUITests;
+			productName = tinderMockUITests;
+			productReference = F55860352B18E05C005E5BF5 /* tinderMockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F55860132B18E059005E5BF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F558601A2B18E059005E5BF5 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					F558602A2B18E05C005E5BF5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = F558601A2B18E059005E5BF5;
+					};
+					F55860342B18E05C005E5BF5 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = F558601A2B18E059005E5BF5;
+					};
+				};
+			};
+			buildConfigurationList = F55860162B18E059005E5BF5 /* Build configuration list for PBXProject "tinderMock" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F55860122B18E059005E5BF5;
+			packageReferences = (
+				F558604A2B18E649005E5BF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = F558601C2B18E059005E5BF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F558601A2B18E059005E5BF5 /* tinderMock */,
+				F558602A2B18E05C005E5BF5 /* tinderMockTests */,
+				F55860342B18E05C005E5BF5 /* tinderMockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F55860192B18E059005E5BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55860262B18E05C005E5BF5 /* Preview Assets.xcassets in Resources */,
+				F55860232B18E05C005E5BF5 /* Assets.xcassets in Resources */,
+				F55860492B18E24F005E5BF5 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860292B18E05C005E5BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860332B18E05C005E5BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F55860172B18E059005E5BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55860212B18E059005E5BF5 /* ContentView.swift in Sources */,
+				F558601F2B18E059005E5BF5 /* tinderMockApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860272B18E05C005E5BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55860302B18E05C005E5BF5 /* tinderMockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55860312B18E05C005E5BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F558603C2B18E05C005E5BF5 /* tinderMockUITestsLaunchTests.swift in Sources */,
+				F558603A2B18E05C005E5BF5 /* tinderMockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F558602D2B18E05C005E5BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F558601A2B18E059005E5BF5 /* tinderMock */;
+			targetProxy = F558602C2B18E05C005E5BF5 /* PBXContainerItemProxy */;
+		};
+		F55860372B18E05C005E5BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F558601A2B18E059005E5BF5 /* tinderMock */;
+			targetProxy = F55860362B18E05C005E5BF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F558603D2B18E05C005E5BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F558603E2B18E05C005E5BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F55860402B18E05C005E5BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tinderMock/Preview Content\"";
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F55860412B18E05C005E5BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tinderMock/Preview Content\"";
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F55860432B18E05C005E5BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tinderMock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tinderMock";
+			};
+			name = Debug;
+		};
+		F55860442B18E05C005E5BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tinderMock.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tinderMock";
+			};
+			name = Release;
+		};
+		F55860462B18E05C005E5BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tinderMock;
+			};
+			name = Debug;
+		};
+		F55860472B18E05C005E5BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWG9KJQX5C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = harooks.tinderMockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tinderMock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F55860162B18E059005E5BF5 /* Build configuration list for PBXProject "tinderMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F558603D2B18E05C005E5BF5 /* Debug */,
+				F558603E2B18E05C005E5BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F558603F2B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55860402B18E05C005E5BF5 /* Debug */,
+				F55860412B18E05C005E5BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F55860422B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55860432B18E05C005E5BF5 /* Debug */,
+				F55860442B18E05C005E5BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F55860452B18E05C005E5BF5 /* Build configuration list for PBXNativeTarget "tinderMockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55860462B18E05C005E5BF5 /* Debug */,
+				F55860472B18E05C005E5BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F558604A2B18E649005E5BF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = F55860132B18E059005E5BF5 /* Project object */;
+}
