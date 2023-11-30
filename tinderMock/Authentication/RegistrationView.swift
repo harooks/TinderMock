@@ -16,6 +16,7 @@ struct RegistrationView: View {
     @State private var gender = Gender.male
     @State private var sexuality = Sexuality.heterosexual
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -70,7 +71,9 @@ struct RegistrationView: View {
             
             // sign up button
             Button {
-                print("signing up")
+                Task {
+                    try await viewModel.createUser(withEmail: email, password: password, first_name: first_name, last_name: last_name, dob: dob, gender: gender, sexuality: sexuality)
+                }
             } label: {
                 Text("Sign up")
                     .fontWeight(.semibold)
