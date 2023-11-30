@@ -34,6 +34,8 @@
 		F55D112A2B18EA8E0046B989 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F55D11292B18EA8E0046B989 /* FirebaseStorageCombine-Community */; };
 		F55D112D2B19051A0046B989 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D112C2B19051A0046B989 /* LoginView.swift */; };
 		F55D11302B1905D30046B989 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D112F2B1905D30046B989 /* InputView.swift */; };
+		F55D11322B190BA80046B989 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D11312B190BA80046B989 /* RegistrationView.swift */; };
+		F55D11352B1911450046B989 /* GenderAndSexualityEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D11342B1911450046B989 /* GenderAndSexualityEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		F55860482B18E24F005E5BF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F55D112C2B19051A0046B989 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F55D112F2B1905D30046B989 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		F55D11312B190BA80046B989 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		F55D11342B1911450046B989 /* GenderAndSexualityEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderAndSexualityEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		F558601D2B18E059005E5BF5 /* tinderMock */ = {
 			isa = PBXGroup;
 			children = (
+				F55D11332B190D180046B989 /* Model */,
 				F55D112E2B1905B60046B989 /* Components */,
 				F55D112B2B19045B0046B989 /* Authentication */,
 				F55860482B18E24F005E5BF5 /* GoogleService-Info.plist */,
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F55D112C2B19051A0046B989 /* LoginView.swift */,
+				F55D11312B190BA80046B989 /* RegistrationView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -192,6 +198,14 @@
 				F55D112F2B1905D30046B989 /* InputView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F55D11332B190D180046B989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F55D11342B1911450046B989 /* GenderAndSexualityEnums.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,8 +363,10 @@
 			files = (
 				F55D112D2B19051A0046B989 /* LoginView.swift in Sources */,
 				F55D11302B1905D30046B989 /* InputView.swift in Sources */,
+				F55D11352B1911450046B989 /* GenderAndSexualityEnums.swift in Sources */,
 				F55860212B18E059005E5BF5 /* ContentView.swift in Sources */,
 				F558601F2B18E059005E5BF5 /* tinderMockApp.swift in Sources */,
+				F55D11322B190BA80046B989 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
