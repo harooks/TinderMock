@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum Gender: String,Equatable, CaseIterable {
+enum Gender: String, Equatable, CaseIterable, Encodable {
     case female = "Female"
     case male = "Male"
     case other = "Other"
@@ -16,7 +16,7 @@ enum Gender: String,Equatable, CaseIterable {
     var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
 }
 
-enum Sexuality: String, Equatable, CaseIterable {
+enum Sexuality: String, Equatable, CaseIterable, Encodable{
     case heterosexual = "Heterosexual"
     case homosexual = "Homosexual"
     case bisexual = "Bisexual"
