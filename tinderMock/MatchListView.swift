@@ -13,9 +13,9 @@ struct MatchListView: View {
     @State var matchedUserNames: [String] = [] // State to store matched user names
     
     var body: some View {
-        List(matchVM.usersMatch, id: \.self) { userMatch in
-            Text(userMatch)
-                .foregroundColor(.white)
+        List(matchVM.matchedUsers) { userMatch in
+            Text(userMatch.first_name)
+                .foregroundColor(.black)
         }
         .background(Color.blue)
         .onAppear {
