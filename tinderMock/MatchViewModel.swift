@@ -15,8 +15,8 @@ class MatchViewModel: ObservableObject {
     @EnvironmentObject var authVM: AuthViewModel
     @Published var users: [User] = []
     // Dictionary to keep track of matches
-    @Published var usersMatch: [String] = []
-//    @Published var matchesDict: [String: [String]] = [:]
+    @Published var usersMatchId: [String] = []
+    @Published var matchedUsers: [User] = []
 
     var partnerPreferences: [String: [String]] = [:]
     let db = Firestore.firestore()
@@ -155,7 +155,7 @@ class MatchViewModel: ObservableObject {
                 }
             }
         
-            self.usersMatch = await findMatches(curUserId: currentUserId, allMatches: matchesDict)
+            self.matchedUsers = await findMatches(curUserId: currentUserId, allMatches: matchesDict)
 //            print(usersMatch)
         } catch {
             // Handle the error here
@@ -164,13 +164,34 @@ class MatchViewModel: ObservableObject {
         
     }
     
-    func findMatches(curUserId: String, allMatches: [String: [String]]) -> [String] {
+    func findMatches(curUserId: String, allMatches: [String: [String]]) -> [User] {
         guard let matchedUserIds = allMatches[curUserId] else {
             return []
         }
-        print("matchedUserIds \(matchedUserIds)")
-        return matchedUserIds
+        
+        db.collection("users")
+            .whereField("id", in: matchedUserIds)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error fetching users: \(error.localizedDescription)")
+                    return
+                }
+                guard let documents = snapshot?.documents else {
+                    print("No users found")
+                    return
+                }
+                
+                self.matchedUsers = documents.compactMap { document in
+                    do {
+                        let user = try document.data(as: User.self)
+                        return user
+                    } catch {
+                        print("Error decoding user: \(error.localizedDescription)")
+                        return nil
+                    }
+                }
+            }
+        
+        return matchedUsers
     }
 }
-
-
