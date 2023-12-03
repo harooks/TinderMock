@@ -22,11 +22,13 @@ struct tinderMockApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var matchViewModel = MatchViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .environmentObject(matchViewModel)
         }
     }
 }
