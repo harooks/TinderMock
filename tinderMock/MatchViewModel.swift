@@ -10,6 +10,7 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
+@MainActor
 class MatchViewModel: ObservableObject {
     @EnvironmentObject var authVM: AuthViewModel
     @Published var users: [User] = []
@@ -123,7 +124,7 @@ class MatchViewModel: ObservableObject {
         }
     }
     
-    func getAllMatches() {
+    func getAllMatches() async {
         
         var matchesDict: [String: [String]] = [:]
         
@@ -133,61 +134,41 @@ class MatchViewModel: ObservableObject {
         }
         
         let currentUserId = currentUser.uid
-                
-        db.collection("swipes").whereField("liked", isEqualTo: true)
-          .getDocuments() { (querySnapshot, error) in
-              if let error = error {
-                  print("Error fetching users: \(error.localizedDescription)")
-                  return
-              }
-              
-              guard let documents = querySnapshot?.documents else {
-                  print("No users found")
-                  return
-              }
-              
-              print("documents are \(documents)")
+        
+        do {
+            let snapshot = try await db.collection("swipes").getDocuments()
+            snapshot.documents.forEach { document in
+                // Parse document name (document.documentID) to get user IDs
+                let splitId = document.documentID.components(separatedBy: "_")
+                let curUserId = splitId[0]
+                let swipedUserId = splitId[1]
 
-              for document in documents {
-                  do {
-                      // Parse document name (document.documentID) to get user IDs
-                      let splitId = document.documentID.components(separatedBy: "_")
-                      guard splitId.count == 2 else {
-                          print("Invalid document ID format")
-                          continue
-                      }
-                      let curUserId = splitId[0]
-                      let swipedUserId = splitId[1]
-                      print("split ids are: \(curUserId) and \(swipedUserId)")
-
-                      // Check if "liked" field is true
-                      if let likedByUser = document.data()["liked"] as? Bool, likedByUser {
-                          // Append swipedUserId to the array for curUserId
-                          if var existingMatches = matchesDict[curUserId] {
-                              existingMatches.append(swipedUserId)
-                              matchesDict[curUserId] = existingMatches
-                          } else {
-                              matchesDict[curUserId] = [swipedUserId]
-                          }
-                      }
-                  } catch {
-                      print("Error processing document: \(error.localizedDescription)")
-                  }
-              }
+                // Check if "liked" field is true
+                if let likedByUser = document.data()["liked"] as? Bool, likedByUser {
+                    // Append swipedUserId to the array for curUserId
+                    if var existingMatches = matchesDict[curUserId] {
+                        existingMatches.append(swipedUserId)
+                        matchesDict[curUserId] = existingMatches
+                    } else {
+                        matchesDict[curUserId] = [swipedUserId]
+                    }
+                }
+            }
         
-          }
+            self.usersMatch = await findMatches(curUserId: currentUserId, allMatches: matchesDict)
+//            print(usersMatch)
+        } catch {
+            // Handle the error here
+            print("Error fetching documents: \(error)")
+        }
         
-        print("all matches is \(matchesDict)")
-        
-        self.usersMatch = findMatches(curUserId: currentUserId, allMatches: matchesDict)
-        
-        print("usersMatch is: \(self.usersMatch)")
     }
     
     func findMatches(curUserId: String, allMatches: [String: [String]]) -> [String] {
         guard let matchedUserIds = allMatches[curUserId] else {
             return []
         }
+        print("matchedUserIds \(matchedUserIds)")
         return matchedUserIds
     }
 }
