@@ -8,21 +8,38 @@
 import SwiftUI
 
 struct MatchingView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var authVM: AuthViewModel
+    @EnvironmentObject var matchVM: MatchViewModel
+    
+    @State private var currentIndex: Int = 0
     
     var body: some View {
         NavigationView {
             VStack {
-                // Other content in your MatchingView
-                Text("Hello, World!")
+                VStack {
+                    if !matchVM.users.isEmpty && currentIndex < matchVM.users.count {
+                        UserCardView(user: matchVM.users[currentIndex]) {
+                            self.currentIndex += 1
+                        } onSwipeRight: {
+                            self.currentIndex += 1
+                        }
+                    } else {
+                        Text("No more users")
+                            .foregroundColor(.gray)
+                            .padding()
+                    }
+                }
+                .onAppear {
+                    matchVM.fetchUsers()
+                 }
+                
+                .navigationBarItems(
+                    trailing: Button(action: {
+                        authVM.signOut()
+                    }) {
+                        Text("Sign Out")
+                    })
             }
-            
-            .navigationBarItems(
-                trailing: Button(action: {
-                    viewModel.signOut()
-                }) {
-                    Text("Sign Out")
-                })
         }
     }
 }
