@@ -55,7 +55,6 @@ class MatchViewModel: ObservableObject {
 
                         // Handle the fetched data using the defined function
                         handleUserData(fetchedGender: fetchedGender, fetchedSexuality: fetchedSexuality)
-                        print("current gender and sex: \(currentUserGender)\(currentUserSexuality)")
                         secondQuery(currentUserGender, currentUserSexuality, fetchedEmail)
                     }
                 }
@@ -94,5 +93,29 @@ class MatchViewModel: ObservableObject {
                 }
             }
     }
-
+    
+    func swiped(swipedUser: User, liked: Bool) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No current user")
+            return
+        }
+        
+        let combinedId = "\(currentUser.uid)_\(swipedUser.id)"
+        
+        let swipeCollection = Firestore.firestore().collection("swipes")
+        let documentRef = swipeCollection.document(combinedId)
+        
+        let data: [String: Any] = [
+            "liked": liked,
+            "timestamp": FieldValue.serverTimestamp()
+        ]
+        
+        documentRef.setData(data, merge: true) { error in
+            if let error = error {
+                print("Error writing document: \(error)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
 }
