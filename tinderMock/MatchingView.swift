@@ -19,8 +19,10 @@ struct MatchingView: View {
                 VStack {
                     if !matchVM.users.isEmpty && currentIndex < matchVM.users.count {
                         UserCardView(user: matchVM.users[currentIndex]) {
+                            matchVM.swiped(swipedUser: matchVM.users[currentIndex], liked: false)
                             self.currentIndex += 1
                         } onSwipeRight: {
+                            matchVM.swiped(swipedUser: matchVM.users[currentIndex], liked: false)
                             self.currentIndex += 1
                         }
                     } else {
