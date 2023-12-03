@@ -13,6 +13,10 @@ import FirebaseFirestore
 class MatchViewModel: ObservableObject {
     @EnvironmentObject var authVM: AuthViewModel
     @Published var users: [User] = []
+    // Dictionary to keep track of matches
+    @Published var usersMatch: [String] = []
+//    @Published var matchesDict: [String: [String]] = [:]
+
     var partnerPreferences: [String: [String]] = [:]
     let db = Firestore.firestore()
     
@@ -118,4 +122,74 @@ class MatchViewModel: ObservableObject {
             }
         }
     }
+    
+    func getAllMatches() {
+        
+        var matchesDict: [String: [String]] = [:]
+        
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No current user")
+            return
+        }
+        
+        let currentUserId = currentUser.uid
+                
+        db.collection("swipes").whereField("liked", isEqualTo: true)
+          .getDocuments() { (querySnapshot, error) in
+              if let error = error {
+                  print("Error fetching users: \(error.localizedDescription)")
+                  return
+              }
+              
+              guard let documents = querySnapshot?.documents else {
+                  print("No users found")
+                  return
+              }
+              
+              print("documents are \(documents)")
+
+              for document in documents {
+                  do {
+                      // Parse document name (document.documentID) to get user IDs
+                      let splitId = document.documentID.components(separatedBy: "_")
+                      guard splitId.count == 2 else {
+                          print("Invalid document ID format")
+                          continue
+                      }
+                      let curUserId = splitId[0]
+                      let swipedUserId = splitId[1]
+                      print("split ids are: \(curUserId) and \(swipedUserId)")
+
+                      // Check if "liked" field is true
+                      if let likedByUser = document.data()["liked"] as? Bool, likedByUser {
+                          // Append swipedUserId to the array for curUserId
+                          if var existingMatches = matchesDict[curUserId] {
+                              existingMatches.append(swipedUserId)
+                              matchesDict[curUserId] = existingMatches
+                          } else {
+                              matchesDict[curUserId] = [swipedUserId]
+                          }
+                      }
+                  } catch {
+                      print("Error processing document: \(error.localizedDescription)")
+                  }
+              }
+        
+          }
+        
+        print("all matches is \(matchesDict)")
+        
+        self.usersMatch = findMatches(curUserId: currentUserId, allMatches: matchesDict)
+        
+        print("usersMatch is: \(self.usersMatch)")
+    }
+    
+    func findMatches(curUserId: String, allMatches: [String: [String]]) -> [String] {
+        guard let matchedUserIds = allMatches[curUserId] else {
+            return []
+        }
+        return matchedUserIds
+    }
 }
+
+
